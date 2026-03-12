@@ -8,13 +8,13 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Mensaje confirmación
-      - run: echo "Ejecutando checkout"
+        run: echo "Ejecutando checkout"
 
       - name: Contruir imagen docker
-      - run: docker build -t imagen-script .
+        run: docker build -t imagen-script .
 
       - name: Dockerizar
-      - run: docker run imagen-script
+        run: docker run imagen-script
